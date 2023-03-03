@@ -15,7 +15,7 @@ function updateCurrentTime() {
   if (portoElement) {
     let portoDateElement = portoElement.querySelector(".date");
     let portoTimeElement = portoElement.querySelector(".time");
-    let portoTime = moment().tz("Europe/Porto");
+    let portoTime = moment().tz("Europe/Lisbon");
 
     portoDateElement.innerHTML = portoTime.format("MMMM	Do YYYY");
     portoTimeElement.innerHTML = portoTime.format(
@@ -27,7 +27,7 @@ function updateCurrentTime() {
   if (opoleElement) {
     let opoleDateElement = opoleElement.querySelector(".date");
     let opoleTimeElement = opoleElement.querySelector(".time");
-    let opoleTime = moment().tz("Europe/Opole");
+    let opoleTime = moment().tz("Europe/Warsaw");
 
     opoleDateElement.innerHTML = opoleTime.format("MMMM	Do YYYY");
     opoleTimeElement.innerHTML = opoleTime.format(
