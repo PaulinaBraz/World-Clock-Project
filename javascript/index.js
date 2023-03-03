@@ -1,5 +1,4 @@
-function updateTime() {
-  // Los Angeles
+function updateCurrentTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
   if (losAngelesElement) {
     let losAngelesDateElement = losAngelesElement.querySelector(".date");
@@ -37,7 +36,7 @@ function updateTime() {
   }
 }
 
-function updateCity(event) {
+function updateCurrentCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
@@ -58,8 +57,8 @@ function updateCity(event) {
   `;
 }
 
-updateTime();
-setInterval(updateTime, 100);
+updateCurrentTime();
+setInterval(updateCurrentTime, 100);
 
 let citiesSelectElement = document.querySelector("#city");
-citiesSelectElement.addEventListener("change", updateCity);
+citiesSelectElement.addEventListener("change", updateCurrentCity);
